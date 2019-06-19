@@ -11,7 +11,6 @@ export default function (
     request : IncomingMessage,
     response: ServerResponse,
     view : View = new View(),
-    tempPath : string|null = null
 ) {
 
     response.write(view.toString());

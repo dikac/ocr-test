@@ -39,9 +39,9 @@ export default class SpaceParser implements Parser{
 
     private $parsers : Map<string, Component> = new Map([
         ['nik' , new Nik()],
-        ['rtRw' , new RtRw()],
         ['headerProvince' , new HeaderProvince()],
         ['headerCity' , new HeaderCity()],
+        ['rtRw' , new RtRw()],
         ['marital' , new Marital()],
         ['job' , new Job()],
         ['nationality' , new Nationality()],

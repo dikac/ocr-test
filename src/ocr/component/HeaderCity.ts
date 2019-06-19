@@ -5,9 +5,9 @@ export default class extends Abstract {
     setText(text: string) {
 
         let patterns = [
-            /[kota]{2,4}[a-zA-Z ]+/i,
-            /[kabupten]{5,9}[a-zA-Z ]+/i,
-            /[jakrt]{4,6}[a-zA-Z ]+/i
+            /([kota][^ ]?){2}[a-zA-Z ]+/i,
+            /([kabupten][^ ]?){3,4}[a-zA-Z ]+/i,
+            /([jakrt][^ ]?){3}[a-zA-Z ]+/i
         ];
 
         for(let pattern of patterns) {

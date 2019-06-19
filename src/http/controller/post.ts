@@ -26,13 +26,16 @@ var options =  {
 export default function (
     request : IncomingMessage,
     response: ServerResponse,
+    tempPath : string,
     view : View = new View(),
-    tempPath : string|null = null
 ) {
 
-    let path = this.tempPath + '/' + this.file.name;
+    // @ts-ignore
+    let file = request.files['test-file'];
+    let path = tempPath + '/' + file.name;
 
-    Space.parseImageFromLocalFile(this.path(), options)
+    console.log('uploading');
+    Space.parseImageFromLocalFile(path, options)
         .then((parsedResult : any) => {
 
             let text = parsedResult.parsedText;
@@ -40,7 +43,9 @@ export default function (
             // remove non ascii char
             text = text.replace(/[^\x00-\x7F]/g, "");
 
+            console.log('scanned : ' + text);
             view.setResult(new SpaceParser(text));
+
             get(request, response, view)
 
         }).catch(function (err : any) {

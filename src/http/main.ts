@@ -16,7 +16,7 @@ export default function (route : express.Express, tempPath : string) {
     });
 
     route.post('/', (req : IncomingMessage, res : ServerResponse) => {
-        return post(req, res);
+        return post(req, res, tempPath);
     });
 
     route.get('/test', (req : IncomingMessage, res : ServerResponse) => {
