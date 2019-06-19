@@ -14,7 +14,7 @@ export default class extends Abstract {
         filter = new FizzBuzzRemove(text, 'lahir', /([lahir].?){2,3}/ig, 0.8);
         text = filter.text;
 
-        let match = text.match(/([a-z]*[\n\r ]{1,3})*([0-3][0-9])-?(0[0-9]|[1[1-2]])-?[1-2][0-9]{3}/gi);
+        let match = text.match(/([a-z]*[\n\r ]{,3})*([0-3][0-9])-?(0[0-9]|[1[1-2]])-?[1-2][0-9]{3}/gi);
 
         if(match !== null) {
 

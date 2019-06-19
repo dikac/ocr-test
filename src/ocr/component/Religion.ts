@@ -21,6 +21,7 @@ export default class extends Abstract {
             ['budha',       /[budha]{3,5}/gi,    0.8],
             ['katolik',     /[khatoli]{4,8}/gi,  0.8],
             ['konghucu',    /[konghuc]{4,8}/gi,  0.8],
+            ['kepercayaan', /[keprcayn]{10,12}/gi,  0.8],
         ];
 
         for(let [name, pattern, weight] of datas) {

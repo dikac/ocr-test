@@ -34,24 +34,38 @@ export default function (
     let file = request.files['test-file'];
     let path = tempPath + '/' + file.name;
 
-    console.log('uploading');
-    Space.parseImageFromLocalFile(path, options)
-        .then((parsedResult : any) => {
+    file.mv(path, (err : any) => {
 
-            let text = parsedResult.parsedText;
+        if(err) {
 
-            // remove non ascii char
-            text = text.replace(/[^\x00-\x7F]/g, "");
+            this.error = err;
 
-            console.log('scanned : ' + text);
-            view.setResult(new SpaceParser(text));
+        } else {
 
-            get(request, response, view)
+            console.log('uploading');
+            Space.parseImageFromLocalFile(path, options)
+                .then((parsedResult : any) => {
 
-        }).catch(function (err : any) {
+                    let text = parsedResult.parsedText;
 
-        console.log('ERROR:', err);
+                    // remove non ascii char
+                    text = text.replace(/[^\x00-\x7F]/g, "");
+
+                    console.log('scanned : ' + text);
+                    view.setResult(new SpaceParser(text));
+
+                    get(request, response, view);
+
+
+                }).catch(function (err : any) {
+
+                console.log('ERROR:', err);
+            });
+
+        }
     });
+
+
 
 }
 

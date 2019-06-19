@@ -11,7 +11,7 @@ export default class extends Abstract {
         text = filter.text;
 
         for (let patterns of [
-            ['laki-laki', /([laki].?){3}([laki].?){2}/gi],
+            ['laki-laki', /([laki][^ ]?){2}[ \-]?([laki][^ ]?){2}/gi],
             ['perempuan', /([permuan][^ ]?){4,5}/gi]
         ]) {
             filter = new FizzBuzzRemove(text, <string>patterns[0], <RegExp>patterns[1], 0.8);
