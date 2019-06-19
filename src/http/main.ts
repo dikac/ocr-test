@@ -23,32 +23,4 @@ export default function (route : express.Express, tempPath : string) {
         return getTest(req, res);
     });
 
-    // route.get('/', (req : IncomingMessage,  res: ServerResponse) => {
-    //
-    //     let template = fs.readFileSync(__dirname + '/view/layout/index.hbs', 'utf8');
-    //
-    //     let part = fs.readFileSync(__dirname + '/view/part/form.hbs', 'utf8');
-    //
-    //
-    //     let template = handlebars.compile(template, { strict: true });
-    //     let html = template({text:'lol'});
-    //
-    //     fs.readFile(__dirname + '/view/layout/index.hbs', 'utf8', (err, data) => {
-    //
-    //         if(err) {
-    //             throw err;
-    //         }
-    //
-    //         let template = handlebars.compile(data, { strict: true });
-    //         let html = template({text:'lol'});
-    //
-    //
-    //         res.write(html);
-    //         res.end();
-    //     });
-    //
-    // });
-
-
-
 }

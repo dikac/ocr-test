@@ -16,25 +16,5 @@ export default function (
     response.write(view.toString());
     response.end();
 
-    // switch (request.method.toLowerCase()) {
-    //
-    //     case  'post' :
-    //         // @ts-ignore
-    //         let space = new Space(tempPath, request.files['test-file'],(space : Space) => {
-    //
-    //             console.log(space);
-    //         });
-    //
-    //
-    //         view.setResult();
-    //
-    //     case  'get' :
-    //        // console.log('GET');
-    //         //console.log(view.toString());
-    //
-    //         break;
-    //     default :
-    //         throw Error();
-    // }
 }
 
