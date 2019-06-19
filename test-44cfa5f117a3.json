@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "massive-boulder-243803",
+  "private_key_id": "44cfa5f117a345ef4dacca55fa352d0282bede0a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDzOmZPx1ipXpI2\nvDkg6cZe8+Hp0KMJtYZNLqr/iPZrVfoSmM8XqA0TQJSkda7yx8zSQndcUIhr4uAT\nmI0xxB2JtvDcNHSbZgyIFY9Age+qjJKykjTj21Ue4sRW1xIfV4IcveLug9BIHA2L\nmUdb9YyKhcIfdPX19TdhpRi78vMyfj5ebjls1Uk6fiS4pUlvu1YfIsoS6KiGw6fV\nq5nesPaTx0UqTgddUswT4Ke1swB53lxSkYyAlK4GeHsukLm/K+f7rM9iwveNvkMU\npovLZ0VgvV3iTZ1p+5DvAj5vWnA07NJdzudRr0Ym0MJUbPXOGfdSA4tlA1vEuZR4\naHIoKkLPAgMBAAECggEAA/XxF8UVp7k0HrmoVH9G2hT7ZzG2j40dLfSS/d/esDDE\noB9M5mqEi/1PoYrCpo49j5vCRdNdGIsOCxByfCgtZiiy4C/nSWbuahwWKrHy+fWZ\np4uQWoWGOIW8AyeaOL7Vp5IpnkJKcGIq9kyXFON5JM64zCC9DWkVopY43BanG/nA\nkvoBs8/ZEIcZRhnhRwVzH+UCyPQ1/vURlNqmqPvdrBOEXgfty9qWI+wcGl1GZoLQ\nvs6Rwsbgdfq33wJxNyWwWr4ADh9kOb09JfEFtQctr48y7o7E/mR4SmfEqcCfjh7b\naiZOaJGgY02JdzqPtMbLgxI0MzUeH+4a1cIpO9RtwQKBgQD+ccsSDKAjiVnqf2z4\nZv1+Bv9g3cgX4aInHOXZE4XivDtgxVp/DIHiPiS9De8JDiVEnZqYRpSc1cpG/GY6\njkMJKtROq301QClrUwG1B67dIJQwtqjXPBNO2i+RPPOuDvbBTU9EprccScsvTJ76\n7bw+zkFMYUvYvvHCUDJiVSbfZQKBgQD0tw1/aEeNOuOzBvPDk5oE3ojcdFAGe1QJ\nR69qt182yErsFT10/ElVqKwspw0XIuRB66E6hjmhGs71msZE2tDPXC3OBhX8wSPi\n5D3e6IueSVoXEF5z9SLpsQTLiWi/YRCQoYyND4TKpd4MtLQi84hBFidczg0qTbCD\nUTtLB2NYIwKBgEJe3nCj2HXMkybG/F7DRqZEHwNedp48HfcD47S/EfJ11StF73gq\nhArG2QBzjQGYrgH69mN4LbXHUo83sVbe2v+eK2kl9HAaf3NeYJifG27U27LlQp96\nLTMpWLUS6CFkB9ueVen7btIzMYvx+ZpMvwjG9mN9EbLFA/0CvFHIEm69AoGAJN6X\niAScEyk2OTjo7SSF5gnpMN3NWMyoAqXsRfXOwKA4uY0Rr1h7bA53slqQ3FWDcnMf\n3YNvl1hEqjhheupE35kRxaKhGW24DG067SS4NGb0zdjHgk0Cr5beFBRl1b+4ETJl\nzLLz3NxUsjFfmox6kOPXlmHtFdySpZZNiqZYT2UCgYEAsz5CDSVyCo7ksLW6+eIu\ndRcx3hP15fyNHY9H25eUxfovpTvN1lAFGqLrMyw5r1xhUEwXFgjBW50MTZ0Wtw3q\n41mdXQidhI8zinpcmpFQvbtsIJlJA+5gY8hkbib+J4QVf6d7Y3BdNiDMbFc+KWkY\nde2ETLx5jJXSlxAkx3Z65G0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "andika@massive-boulder-243803.iam.gserviceaccount.com",
+  "client_id": "106706940772701188738",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/andika%40massive-boulder-243803.iam.gserviceaccount.com"
+}
