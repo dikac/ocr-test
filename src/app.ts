@@ -2,6 +2,7 @@ import {IncomingMessage, ServerResponse} from "http";
 import express from "express";
 import main from "./http/main";
 import Upload from "express-fileupload";
+import fs from 'fs'
 
 // config
 let config = {
@@ -11,6 +12,9 @@ let config = {
 
 };
 
+if (!fs.existsSync(config.path_temp)){
+    fs.mkdirSync(config.path_temp);
+}
 
 // const express = require('express');
 const app  : express.Express = express();
@@ -22,9 +26,6 @@ main(app, config.path_temp);
 
 app.listen(config.port, () => console.log(`Example app listening on port ${config.port}!`));
 
-
-//
-//
 
 
 
@@ -41,3 +42,4 @@ app.listen(config.port, () => console.log(`Example app listening on port ${confi
 // console.log(app);
 //
 // //app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
