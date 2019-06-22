@@ -1,7 +1,7 @@
 "use strict";
 
 // @ts-ignore
-const ocrSpaceApi = require("ocr-space-api");
+const ocr_space_api = require("ocr-space-api");
 const Index = require("../view/Index");
 const SpaceParser = require("../../ocr/parser/SpaceParser");
 const get = require("./get");
@@ -15,20 +15,17 @@ var options = {
     isOverlayRequired: true,
     isTable: false
 };
-
 exports.default = function (request, response, tempPath, view = new Index.default()) {
     // @ts-ignore
     let file = request.files['test-file'];
     let path = tempPath + '/' + file.name;
-
     file.mv(path, (err) => {
         if (err) {
             this.error = err;
         }
         else {
             console.log('uploading');
-
-            ocrSpaceApi.default.parseImageFromLocalFile(path, options)
+            ocr_space_api.default.parseImageFromLocalFile(path, options)
                 .then((parsedResult) => {
                 let text = parsedResult.parsedText;
                 // remove non ascii char
@@ -36,11 +33,9 @@ exports.default = function (request, response, tempPath, view = new Index.defaul
                 console.log('scanned : ' + text);
                 view.setResult(new SpaceParser.default(text));
                 get.default(request, response, view);
-
             }).catch(function (err) {
-
                 console.log('ERROR:', err);
             });
         }
     });
-};
+}
