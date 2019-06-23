@@ -13,10 +13,11 @@ let config = {
 };
 
 if (!fs.existsSync(config.path_temp)){
+
     fs.mkdirSync(config.path_temp);
 }
 
-// const express = require('express');
+
 const app  : express.Express = express();
 
 
@@ -24,7 +25,7 @@ app.use(Upload());
 main(app, config.path_temp);
 
 
-app.listen(config.port, () => console.log(`Example app listening on port ${config.port}!`));
+app.listen(config.port, () => console.log(`OCR APP active at localhost:${config.port}!`));
 
 
 

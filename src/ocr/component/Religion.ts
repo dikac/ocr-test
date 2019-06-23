@@ -3,8 +3,6 @@ import Abstract from "./Abstract";
 import Fuzzy from "fuzzyset.js";
 import FizzBuzzRemove from "../utility/FizzBuzzRemove";
 
-console.log(Fuzzy);
-
 export default class extends Abstract {
 
     setText(text: string) {

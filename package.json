@@ -10,10 +10,8 @@
     "express-fileupload": "^1.1.5",
     "fuzzyset.js": "0.0.8",
     "handlebars": "^4.1.2",
-    "jimp": "^0.6.4",
     "ocr-space-api": "^1.0.1",
-    "typescript": "^3.5.2",
-    "xml2js": "^0.4.19"
+    "typescript": "^3.5.2"
   },
   "devDependencies": {
     "@types/express-fileupload": "^1.1.0"

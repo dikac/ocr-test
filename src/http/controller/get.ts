@@ -3,8 +3,7 @@ import handlebars from "handlebars";
 import fs from 'fs'
 import {IncomingMessage, ServerResponse} from "http";
 import View from "../view/Index";
-import Recognize from "../../ocr/Recognize";
-import CloundMersive from "../../ocr/CloundMersive";
+
 
 
 export default function (

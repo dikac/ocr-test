@@ -2,14 +2,12 @@
 import Space from "ocr-space-api";
 import util from "util";
 
-import jimp from 'jimp';
 import express from "express";
 import handlebars from "handlebars";
 import fs from 'fs'
 import {IncomingMessage, ServerResponse} from "http";
 import View from "../view/Index";
-import Recognize from "../../ocr/Recognize";
-import CloundMersive from "../../ocr/CloundMersive";
+
 import SpaceParser from "../../ocr/parser/SpaceParser";
 import get from "./get";
 
