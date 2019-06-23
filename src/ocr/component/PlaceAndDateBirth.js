@@ -3,13 +3,14 @@
 const Abstract = require("./Abstract");
 const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-exports.default = class extends Abstract.default {
+module.exports = class extends Abstract {
+
     setText(text) {
-        let filter = new FizzBuzzRemove.default(text, 'tempat', /([tempa].?){2,3}/ig, 0.8);
+        let filter = new FizzBuzzRemove(text, 'tempat', /([tempa].?){2,3}/ig, 0.8);
         text = filter.text;
-        filter = new FizzBuzzRemove.default(text, 'tgl', /([tgl].?){2}/ig, 0.8);
+        filter = new FizzBuzzRemove(text, 'tgl', /([tgl].?){2}/ig, 0.8);
         text = filter.text;
-        filter = new FizzBuzzRemove.default(text, 'lahir', /([lahir].?){2,3}/ig, 0.8);
+        filter = new FizzBuzzRemove(text, 'lahir', /([lahir].?){2,3}/ig, 0.8);
         text = filter.text;
         let match = text.match(/([a-z]*[\n\r ]{,3})*([0-3][0-9])-?(0[0-9]|[1[1-2]])-?[1-2][0-9]{3}/gi);
         if (match !== null) {

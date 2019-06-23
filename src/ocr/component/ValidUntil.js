@@ -1,11 +1,12 @@
 "use strict";
 
-const Abstract = __importDefault(require("./Abstract"));
-const FizzBuzzRemove = __importDefault(require("../utility/FizzBuzzRemove"));
+const Abstract = require("./Abstract");
+const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-exports.default = class extends Abstract.default {
+module.exports =  class extends Abstract {
+
     setText(text) {
-        let filter = new FizzBuzzRemove.default(text, 'berlaku hingga', /([berlaku][^ ]?){3,4}[ ]?([hinga][^ ]){2,3}/gi, 0.8);
+        let filter = new FizzBuzzRemove(text, 'berlaku hingga', /([berlaku][^ ]?){3,4}[ ]?([hinga][^ ]){2,3}/gi, 0.8);
         text = filter.text;
 
         let patterns = [

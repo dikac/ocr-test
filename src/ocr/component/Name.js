@@ -3,9 +3,9 @@
 const Abstract = require("./Abstract");
 const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-exports.default = class extends Abstract.default {
+module.exports = class extends Abstract {
     setText(text) {
-        let filter = new FizzBuzzRemove.default(text, 'nama', /([nam].?){2}/ig, 0.8);
+        let filter = new FizzBuzzRemove(text, 'nama', /([nam].?){2}/ig, 0.8);
         text = filter.text;
         text = text.trim();
         let match = text.match(/[ a-z]*/gi);
@@ -21,3 +21,4 @@ exports.default = class extends Abstract.default {
         super.setText(text);
     }
 };
+

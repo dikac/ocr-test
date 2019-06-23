@@ -2,7 +2,7 @@
 
 const tesseract = require("tesseract.js");
 
-exports.default = class  {
+module.exports = class  {
     constructor(tempPath, file) {
         this.tempPath = tempPath;
         this.file = file;

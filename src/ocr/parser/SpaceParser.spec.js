@@ -1,6 +1,7 @@
 "use strict";
 
-const SpaceParser = __importDefault(require("./SpaceParser"));
+const SpaceParser = require("./SpaceParser");
+
 let results = [
     'NIK \r\nPROVINSI LAMPUNG \r\nKOTA BANDAR LAMPUNG \r\n—-NiCO a-JLIAN \r\nLahWz BANDAR \r\n&nis keiamin \r\nAlamat \r\nRT/RW \r\nKeVDesa \r\nKecamatan \r\nAgama \r\nLAKH-AKI \r\n•as.AGUNG WAY HALIM \r\n- KEDATON \r\n: KEDATCN \r\nStatus Perkawinan: BELL-JM KAWIN \r\nPekerjaan \r\n: PELAJAR/MAHASiSWA \r\nKewarganegaraan: WNI \r\nBeriakuHingga t SEUMUR HIDUP \r\nKOTA BANDAR \r\n28-07-2016 \r\n',
     'PROVINSI PAPUA \r\nKABUPATEWYAUP..O \r\n*TempaVTgi Lahir±MELANGGAMRi—— \r\n•iamat \r\nAgama \r\ntoekerjaan \r\nAewarganegaraan:WNt \r\nBeriakuHinggw -SEUMUR+åDUææ \r\n',
@@ -19,7 +20,7 @@ let results = [
 // Status Per`.replace(/RT\/RW/i, ''));
 for (let result of results) {
     // console.log(result);
-    let parser = new SpaceParser.default(result);
+    let parser = new SpaceParser(result);
     console.log(parser.parsers);
 }
 //# sourceMappingURL=SpaceParser.spec.js.map

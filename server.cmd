@@ -1,1 +1,1 @@
-start node dist/app.js
+start node src/app.js

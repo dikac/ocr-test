@@ -3,7 +3,7 @@
 const handlebars = require("handlebars");
 const fs = require("fs");
 
-exports.default = class  {
+module.exports =  class  {
     constructor() {
         this.result = null;
         handlebars.default.registerPartial('form', this.form());

@@ -34,7 +34,7 @@ let test = 'PROVINSI LAMPUNG \r\nKOTA BANDAR LAMPUNG \r\nNIK \r\nNama \r\n- NtCO
 // WONOGRI
 // 21-112017
 // `;
-exports.default = function (request, response, view = new Index.default()) {
+module.exports = function (request, response, view = new Index.default()) {
     console.log(new SpaceParser.default(test));
     view.setResult(new SpaceParser.default(test));
     get.default(request, response, view);

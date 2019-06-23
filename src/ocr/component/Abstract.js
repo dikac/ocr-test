@@ -1,7 +1,7 @@
 "use strict";
 
 
-exports.default = class  {
+module.exports = class {
     constructor() {
         this.result = '';
         this.$text = '';
@@ -19,3 +19,4 @@ exports.default = class  {
         return this.result;
     }
 };
+

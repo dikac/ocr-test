@@ -1,15 +1,15 @@
 "use strict";
 
-const Abstract = __importDefault(require("./Abstract"));
+const Abstract = require("./Abstract");
 // @ts-ignore
-const fuzzyset = __importDefault(require("fuzzyset.js"));
-const FizzBuzzRemove = __importDefault(require("../utility/FizzBuzzRemove"));
+const fuzzyset = require("fuzzyset.js");
+const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-console.log(fuzzyset.default);
+console.log(fuzzyset);
 
-exports.default = class extends Abstract.default {
+module.exports = class extends Abstract {
     setText(text) {
-        let filter = new FizzBuzzRemove.default(text, 'agama', /([aga].?){2,3}/ig, 0.8);
+        let filter = new FizzBuzzRemove(text, 'agama', /([aga].?){2,3}/ig, 0.8);
         text = filter.text;
         text = text.replace(/[agm]{3,5}/i, '');
         let datas = [
@@ -22,7 +22,7 @@ exports.default = class extends Abstract.default {
             ['kepercayaan', /[keprcayn]{10,12}/gi, 0.8],
         ];
         for (let [name, pattern, weight] of datas) {
-            filter = new FizzBuzzRemove.default(text, name, pattern, weight);
+            filter = new FizzBuzzRemove(text, name, pattern, weight);
             if (filter.matched !== '') {
                 text = filter.text;
                 this.setResult(filter.matched);

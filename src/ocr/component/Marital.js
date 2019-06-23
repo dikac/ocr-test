@@ -3,9 +3,9 @@
 const Abstract = require("./Abstract");
 const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-exports.default = class extends Abstract.default {
+module.exports = class extends Abstract {
     setText(text) {
-        let filter = new FizzBuzzRemove.default(text, 'status perkawinan', /([stau].?){2,3}.?([perkawin].?){4,5}/ig, 0.8);
+        let filter = new FizzBuzzRemove(text, 'status perkawinan', /([stau].?){2,3}.?([perkawin].?){4,5}/ig, 0.8);
         text = filter.text;
         let list = [
             ['belum kawin', /([belum][^ ]?){2,3}[ ]?([kawin][^ ]?){2,3}/gi, 8],
@@ -14,7 +14,7 @@ exports.default = class extends Abstract.default {
             ['kawin', /([kawin][^ ]?){2,3}/gi, 8],
         ];
         for (let [name, pattern, weight] of list) {
-            filter = new FizzBuzzRemove.default(text, name, pattern, weight);
+            filter = new FizzBuzzRemove(text, name, pattern, weight);
             if (filter.matched !== '') {
                 text = filter.text;
                 this.setResult(filter.matched);
@@ -23,4 +23,4 @@ exports.default = class extends Abstract.default {
         }
         super.setText(filter.text);
     }
-};
+}

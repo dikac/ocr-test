@@ -2,7 +2,7 @@
 
 const Abstract = require("./Abstract");
 
-exports.default = class extends Abstract.default {
+module.exports = class extends Abstract {
     setText(text) {
         let patterns = [
             /([kota][^ ]?){2}[a-zA-Z ]+/i,

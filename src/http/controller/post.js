@@ -15,7 +15,8 @@ var options = {
     isOverlayRequired: true,
     isTable: false
 };
-exports.default = function (request, response, tempPath, view = new Index.default()) {
+
+module.exports =  function (request, response, tempPath, view = new Index.default()) {
     // @ts-ignore
     let file = request.files['test-file'];
     let path = tempPath + '/' + file.name;

@@ -11,7 +11,7 @@ let config = {
 };
 
 
-const app = express.default();
-app.use(fileupload.default());
-main.default(app, config.path_temp);
+const app = express();
+app.use(fileupload());
+main(app, config.path_temp);
 app.listen(config.port, () => console.log(`Example app listening on port ${config.port}!`));

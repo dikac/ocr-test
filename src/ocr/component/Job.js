@@ -4,10 +4,10 @@ const Abstract = require("./Abstract");
 const fuzzyset = require("fuzzyset.js");
 const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-exports.default = class  extends Abstract.default {
+module.exports = class extends Abstract {
 
     setText(text) {
-        let filterText = new FizzBuzzRemove.default(text, 'pekerjaan', /([pekrjan].?){4,5}/ig, 0.8);
+        let filterText = new FizzBuzzRemove(text, 'pekerjaan', /([pekrjan].?){4,5}/ig, 0.8);
         text = filterText.text;
         let texts = text.split(/[ ]?[\n\r][ ]?/);
         let filter = fuzzyset.default(texts);
@@ -113,4 +113,4 @@ exports.default = class  extends Abstract.default {
         }
         super.setText(text);
     }
-}
+};

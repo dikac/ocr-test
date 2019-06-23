@@ -17,28 +17,28 @@ const AdressesClear = require("../component/AdressesClear");
 const AsciiDotSlash = require("../component/AsciiDotSlash");
 
 
-exports.default = class  {
+module.exports = class  {
 
     constructor(text) {
         this.$text = '';
         this.$parsers = new Map([
-            ['nik', new Nik.default()],
-            ['headerProvince', new HeaderProvince.default()],
-            ['headerCity', new HeaderCity.default()],
-            ['rtRw', new RtRw.default()],
-            ['marital', new Marital.default()],
-            ['job', new Job.default()],
-            ['nationality', new Nationality.default()],
-            ['religion', new Religion.default()],
-            ['gender', new Gender.default()],
-            ['name', new Name.default()],
-            ['placeAndDateBirth', new PlaceAndDateBirth.default()],
-            ['validUntil', new ValidUntil.default()],
-            ['bloodType', new BloodType.default()],
-            ['', new AdressesClear.default()],
-            ['alamat', new AsciiDotSlash.default()],
-            ['kelurahanDesa', new AsciiDotSlash.default()],
-            ['kecamatan', new AsciiDotSlash.default()],
+            ['nik', new Nik()],
+            ['headerProvince', new HeaderProvince()],
+            ['headerCity', new HeaderCity()],
+            ['rtRw', new RtRw()],
+            ['marital', new Marital()],
+            ['job', new Job()],
+            ['nationality', new Nationality()],
+            ['religion', new Religion()],
+            ['gender', new Gender()],
+            ['name', new Name()],
+            ['placeAndDateBirth', new PlaceAndDateBirth()],
+            ['validUntil', new ValidUntil()],
+            ['bloodType', new BloodType()],
+            ['', new AdressesClear()],
+            ['alamat', new AsciiDotSlash()],
+            ['kelurahanDesa', new AsciiDotSlash()],
+            ['kecamatan', new AsciiDotSlash()],
         ]);
         // remove non ascii char
         text = text.replace(/[^\x00-\x7F]/g, "");

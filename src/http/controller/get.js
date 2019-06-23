@@ -1,7 +1,8 @@
 "use strict";
 
 const Index = require("../view/Index");
-exports.default = function (request, response, view = new Index.default()) {
+
+module.exports = function (request, response, view = new Index()) {
     response.write(view.toString());
     response.end();
 };
