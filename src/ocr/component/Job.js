@@ -10,7 +10,7 @@ module.exports = class extends Abstract {
         let filterText = new FizzBuzzRemove(text, 'pekerjaan', /([pekrjan].?){4,5}/ig, 0.8);
         text = filterText.text;
         let texts = text.split(/[ ]?[\n\r][ ]?/);
-        let filter = fuzzyset.default(texts);
+        let filter = fuzzyset(texts);
         //.get(compare, null, weigh);
         let list = [
             'BELUM/TIDAK BEKERJA',

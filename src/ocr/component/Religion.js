@@ -5,8 +5,6 @@ const Abstract = require("./Abstract");
 const fuzzyset = require("fuzzyset.js");
 const FizzBuzzRemove = require("../utility/FizzBuzzRemove");
 
-console.log(fuzzyset);
-
 module.exports = class extends Abstract {
     setText(text) {
         let filter = new FizzBuzzRemove(text, 'agama', /([aga].?){2,3}/ig, 0.8);

@@ -16,7 +16,7 @@ var options = {
     isTable: false
 };
 
-module.exports =  function (request, response, tempPath, view = new Index.default()) {
+module.exports =  function (request, response, tempPath, view = new Index()) {
     // @ts-ignore
     let file = request.files['test-file'];
     let path = tempPath + '/' + file.name;
@@ -26,14 +26,14 @@ module.exports =  function (request, response, tempPath, view = new Index.defaul
         }
         else {
             console.log('uploading');
-            ocr_space_api.default.parseImageFromLocalFile(path, options)
+            ocr_space_api.parseImageFromLocalFile(path, options)
                 .then((parsedResult) => {
                 let text = parsedResult.parsedText;
                 // remove non ascii char
                 text = text.replace(/[^\x00-\x7F]/g, "");
                 console.log('scanned : ' + text);
-                view.setResult(new SpaceParser.default(text));
-                get.default(request, response, view);
+                view.setResult(new SpaceParser(text));
+                get(request, response, view);
             }).catch(function (err) {
                 console.log('ERROR:', err);
             });
